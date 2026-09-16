@@ -4113,3 +4113,18 @@ body.jbs-home {
     white-space: normal !important;
   }
 }
+
+
+/* ==========================================================================
+   v114
+   PC / Tablet / SP 共通：「≫」マーカーをJBSピンクに統一
+   ========================================================================== */
+
+.jbs-more::before,
+.jbs-flow__go::before,
+.jbs-more:hover::before,
+.jbs-more:focus-visible::before,
+.jbs-flow__go:hover::before,
+.jbs-flow__go:focus-visible::before {
+  color: var(--jbs-brand) !important;
+}
