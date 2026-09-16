@@ -3976,3 +3976,51 @@ body.jbs-home {
   content: none !important;
   display: none !important;
 }
+
+
+/* ==========================================================================
+   v119
+   全体の情報密度を保ったまま、余白をほんの少し追加
+   ========================================================================== */
+
+.jbs-main {
+  padding-top: 14px !important;
+}
+
+.jbs-newscols--dual {
+  margin-bottom: 24px !important;
+}
+
+.jbs-start-full .jbs-sec {
+  margin-bottom: 24px !important;
+}
+
+.jbs-dashboard-grid {
+  margin-bottom: 28px !important;
+}
+
+/* 見出しと本文の間に2pxだけ余裕を追加 */
+.jbs-vb__hd,
+.jbs-newscols .jbs-sec__hd,
+.jbs-start-full .jbs-sec__hd,
+.jbs-dashboard-grid .jbs-sec__hd {
+  margin-bottom: 10px !important;
+}
+
+/* 競技情報の小見出しに少しだけ高さを追加 */
+.jbs-dashboard-subhd,
+.jbs-dashboard-subtitle {
+  height: 34px !important;
+}
+
+/* ランキング・タイトル行の呼吸感をわずかに増やす */
+.jbs-dash-list > li {
+  min-height: 34px !important;
+}
+
+/* タブレットの上下段間も少しだけ広げる */
+@media (min-width:601px) and (max-width:1100px) {
+  .jbs-competition-grid {
+    row-gap: 22px !important;
+  }
+}
