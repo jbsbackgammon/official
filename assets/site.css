@@ -3338,3 +3338,60 @@ body.jbs-home {
     margin-top: 8px;
   }
 }
+
+
+/* ==========================================================================
+   競技情報：小見出し・列幅・下端位置の最終調整
+   ========================================================================== */
+
+@media (min-width:1101px) {
+  .jbs-dashboard-grid {
+    grid-template-columns: minmax(0,7fr) minmax(0,3fr) !important;
+  }
+
+  .jbs-competition-grid {
+    grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .jbs-competition-group {
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+}
+
+/* 通算レーティング / 今期ランキング / 五大タイトル / 交流タイトル */
+.jbs-dashboard-subhd,
+.jbs-dashboard-subtitle {
+  position: relative;
+  background: rgba(0,0,0,.025);
+  color: var(--jbs-ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.jbs-dashboard-subhd {
+  padding-left: 10px;
+  padding-right: 6px;
+}
+
+.jbs-dashboard-subtitle {
+  padding-left: 10px;
+  padding-right: 6px;
+}
+
+.jbs-dashboard-subhd::before,
+.jbs-dashboard-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 3px;
+  height: 16px;
+  background: var(--jbs-brand);
+}
+
+.jbs-dashboard-subhd h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
