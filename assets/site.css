@@ -4200,3 +4200,39 @@ body.jbs-home {
   content: none !important;
   display: none !important;
 }
+
+
+/* ==========================================================================
+   v117
+   「≫系リンク」最終配色
+   - 記号：常時JBSピンク
+   - 文字：通常は黒、hover/focus時のみJBSピンク
+   PC / Tablet / SP 共通
+   ========================================================================== */
+
+.jbs-home .jbs-more,
+.jbs-home .jbs-flow__go,
+.jbs-home .jbs-more:link,
+.jbs-home .jbs-flow__go:link,
+.jbs-home .jbs-more:visited,
+.jbs-home .jbs-flow__go:visited,
+.jbs-home .jbs-more:active,
+.jbs-home .jbs-flow__go:active {
+  color: var(--jbs-ink) !important;
+}
+
+.jbs-home .jbs-more:hover,
+.jbs-home .jbs-flow__go:hover,
+.jbs-home .jbs-more:focus-visible,
+.jbs-home .jbs-flow__go:focus-visible {
+  color: var(--jbs-brand) !important;
+}
+
+.jbs-home .jbs-more::before,
+.jbs-home .jbs-flow__go::before,
+.jbs-home .jbs-more:hover::before,
+.jbs-home .jbs-flow__go:hover::before,
+.jbs-home .jbs-more:focus-visible::before,
+.jbs-home .jbs-flow__go:focus-visible::before {
+  color: var(--jbs-brand) !important;
+}
