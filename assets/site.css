@@ -3507,3 +3507,64 @@ body.jbs-home {
     width: 100% !important;
   }
 }
+
+
+/* ==========================================================================
+   競技情報：列間の左右余白を復元（背景塗りは維持）
+   ========================================================================== */
+
+@media (min-width:1101px) {
+  .jbs-competition-grid {
+    gap: 16px !important;
+  }
+
+  .jbs-competition-group + .jbs-competition-group {
+    padding-left: 16px !important;
+    border-left: 1px solid var(--jbs-line) !important;
+  }
+
+  .jbs-dashboard-subhd,
+  .jbs-dashboard-subtitle {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width:1100px) and (min-width:601px) {
+  .jbs-competition-grid {
+    gap: 16px !important;
+  }
+
+  .jbs-competition-group + .jbs-competition-group {
+    padding-left: 16px !important;
+  }
+
+  .jbs-title-groups {
+    gap: 16px !important;
+  }
+
+  .jbs-title-groups .jbs-champion-group + .jbs-champion-group {
+    padding-left: 16px !important;
+  }
+
+  .jbs-dashboard-subhd,
+  .jbs-dashboard-subtitle {
+    width: 100% !important;
+  }
+}
+
+
+/* ==========================================================================
+   競技情報：最下部罫線を通常の1px表示へ戻す
+   ========================================================================== */
+
+@media (min-width:1101px) {
+  .jbs-competition-card {
+    border-bottom: 0 !important;
+  }
+
+  .jbs-competition-card .jbs-dash-list > li:last-child {
+    border-bottom: 1px solid var(--jbs-line) !important;
+  }
+}
