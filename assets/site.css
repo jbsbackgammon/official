@@ -3744,3 +3744,16 @@ body.jbs-home {
     column-gap: 20px !important;
   }
 }
+
+
+/* ==========================================================================
+   ビッグメニュー：同一小項目内の2列間隔を適正化
+   ========================================================================== */
+
+@media (min-width:901px) {
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group--2col {
+    grid-template-columns: repeat(2, max-content) !important;
+    justify-content: start !important;
+    column-gap: 28px !important;
+  }
+}
