@@ -3757,3 +3757,40 @@ body.jbs-home {
     column-gap: 28px !important;
   }
 }
+
+
+/* ==========================================================================
+   SNSロゴ：現行グリフへ統一 / 見た目の高さを揃える
+   ========================================================================== */
+
+@media (min-width:901px) {
+  .jbs-hd__sns a {
+    width: auto !important;
+    min-width: 42px !important;
+    height: 38px !important;
+    padding: 0 2px !important;
+  }
+
+  .jbs-hd__sns img {
+    width: auto !important;
+    height: 30px !important;
+    max-width: none !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width:900px) {
+  .jbs-drawer__sns a {
+    width: auto !important;
+    min-width: 46px !important;
+    height: 46px !important;
+    padding: 0 !important;
+  }
+
+  .jbs-drawer__sns img {
+    width: auto !important;
+    height: 32px !important;
+    max-width: none !important;
+    object-fit: contain !important;
+  }
+}
