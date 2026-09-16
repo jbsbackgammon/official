@@ -3093,3 +3093,27 @@ body.jbs-home {
     transform: translateY(4px) !important;
   }
 }
+
+
+/* ==========================================================================
+   今日のポジション：コンテンツ外周を罫線で囲む
+   ========================================================================== */
+
+.jbs-position-card .jbs-position,
+.jbs-position-card .jbs-position__choices {
+  box-sizing: border-box !important;
+  border-left: 1px solid var(--jbs-line) !important;
+  border-right: 1px solid var(--jbs-line) !important;
+}
+
+.jbs-position-card .jbs-position {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.jbs-position-card .jbs-position__choices {
+  border-bottom: 1px solid var(--jbs-line) !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+  padding-bottom: 6px !important;
+}
