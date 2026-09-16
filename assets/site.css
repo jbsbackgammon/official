@@ -1977,8 +1977,8 @@ body.jbs-home {
 }
 
 .jbs-dashboard-grid {
-  grid-template-columns: minmax(0,1.9fr)
-    minmax(0,1.9fr)
+  grid-template-columns:
+    minmax(0,3.8fr)
     minmax(0,1.9fr)
     minmax(0,3.3fr) !important;
 }
@@ -3116,4 +3116,115 @@ body.jbs-home {
   padding-left: 6px !important;
   padding-right: 6px !important;
   padding-bottom: 6px !important;
+}
+
+
+/* ==========================================================================
+   JBS情報：レーティング統合 / タイトル保持者のカテゴリ分け
+   ========================================================================== */
+
+.jbs-rating-groups {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 16px;
+}
+
+.jbs-rating-group {
+  min-width: 0;
+}
+
+.jbs-rating-group--season {
+  padding-left: 16px;
+  border-left: 1px solid var(--jbs-line);
+}
+
+.jbs-dashboard-subhd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 32px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--jbs-line);
+}
+
+.jbs-dashboard-subhd h3,
+.jbs-dashboard-subtitle {
+  margin: 0;
+  color: var(--jbs-ink);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.jbs-dashboard-subhd .jbs-more {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  padding: 0 !important;
+  color: var(--jbs-ink-2) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.jbs-dashboard-subhd .jbs-more::before {
+  content: "≫";
+  margin-right: 2px;
+  color: var(--jbs-brand);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.jbs-dashboard-subhd .jbs-more::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .jbs-dashboard-subhd .jbs-more:hover {
+    color: var(--jbs-brand) !important;
+  }
+}
+
+.jbs-rating-card .jbs-dash__name {
+  font-weight: 700 !important;
+}
+
+.jbs-dashboard-subtitle {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--jbs-line);
+}
+
+.jbs-champion-group + .jbs-champion-group {
+  margin-top: 0;
+}
+
+@media (max-width:1100px) and (min-width:601px) {
+  .jbs-rating-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width:600px) {
+  .jbs-rating-groups {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .jbs-rating-group--season {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .jbs-rating-group--season .jbs-dashboard-subhd {
+    margin-top: 8px;
+  }
 }
