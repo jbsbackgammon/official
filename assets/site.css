@@ -3395,3 +3395,62 @@ body.jbs-home {
   font-size: 14px;
   font-weight: 700;
 }
+
+
+/* ==========================================================================
+   競技情報：小見出し階層 / 背景全面 / 下端ライン整列
+   ========================================================================== */
+
+/* 小見出しは親見出しと競合しないよう、左アクセント線を使わない */
+.jbs-dashboard-subhd,
+.jbs-dashboard-subtitle {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0,0,0,.035) !important;
+  border-bottom: 1px solid var(--jbs-line) !important;
+}
+
+.jbs-dashboard-subhd {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.jbs-dashboard-subtitle {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.jbs-dashboard-subhd::before,
+.jbs-dashboard-subtitle::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* PCでは左右カードを同じグリッド行高にし、最下部の罫線を共通位置に固定 */
+@media (min-width:1101px) {
+  .jbs-dashboard-grid {
+    align-items: stretch !important;
+  }
+
+  .jbs-competition-card,
+  .jbs-position-card {
+    height: 100% !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid var(--jbs-line) !important;
+  }
+
+  .jbs-competition-card {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .jbs-competition-card .jbs-competition-grid {
+    flex: 1 1 auto !important;
+  }
+
+  /* 下端の基準線をカード側に一本化 */
+  .jbs-competition-card .jbs-dash-list > li:last-child,
+  .jbs-position-card .jbs-position__choices {
+    border-bottom: 0 !important;
+  }
+}
