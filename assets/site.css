@@ -3228,3 +3228,113 @@ body.jbs-home {
     margin-top: 8px;
   }
 }
+
+
+/* ==========================================================================
+   JBS競技情報：レーティング・タイトル保持者を統合
+   ========================================================================== */
+
+.jbs-dashboard-grid {
+  grid-template-columns: minmax(0,6.7fr) minmax(0,3.3fr) !important;
+}
+
+.jbs-competition-card .jbs-sec__hd {
+  justify-content: space-between !important;
+}
+
+.jbs-sec__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-left: auto;
+  min-width: 0;
+}
+
+.jbs-sec__links .jbs-more {
+  margin-left: 0 !important;
+}
+
+.jbs-competition-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 16px;
+}
+
+.jbs-competition-group {
+  min-width: 0;
+}
+
+.jbs-competition-group + .jbs-competition-group {
+  padding-left: 16px;
+  border-left: 1px solid var(--jbs-line);
+}
+
+.jbs-title-groups {
+  display: block;
+}
+
+@media (max-width:1100px) {
+  .jbs-dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .jbs-competition-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .jbs-title-groups {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 16px;
+    padding-left: 0 !important;
+    border-left: 0 !important;
+  }
+
+  .jbs-title-groups .jbs-champion-group + .jbs-champion-group {
+    padding-left: 16px;
+    border-left: 1px solid var(--jbs-line);
+  }
+}
+
+@media (max-width:600px) {
+  .jbs-competition-card .jbs-sec__hd {
+    align-items: flex-start !important;
+  }
+
+  .jbs-sec__links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px 12px;
+  }
+
+  .jbs-competition-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .jbs-competition-group + .jbs-competition-group {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .jbs-competition-group + .jbs-competition-group .jbs-dashboard-subhd,
+  .jbs-title-groups {
+    margin-top: 8px;
+  }
+
+  .jbs-title-groups {
+    grid-column: auto;
+    display: block;
+  }
+
+  .jbs-title-groups .jbs-champion-group + .jbs-champion-group {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .jbs-title-groups .jbs-champion-group + .jbs-champion-group .jbs-dashboard-subtitle {
+    margin-top: 8px;
+  }
+}
