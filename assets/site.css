@@ -4150,3 +4150,53 @@ body.jbs-home {
 .jbs-flow__go::before {
   color: var(--jbs-brand) !important;
 }
+
+
+/* ==========================================================================
+   v116
+   「≫系リンク」の最終共通スタイル
+   個別セクションの過去定義より優先し、PC / Tablet / SP で完全統一
+   ========================================================================== */
+
+.jbs-home .jbs-more,
+.jbs-home .jbs-flow__go,
+.jbs-home .jbs-more:link,
+.jbs-home .jbs-flow__go:link,
+.jbs-home .jbs-more:visited,
+.jbs-home .jbs-flow__go:visited,
+.jbs-home .jbs-more:hover,
+.jbs-home .jbs-flow__go:hover,
+.jbs-home .jbs-more:focus-visible,
+.jbs-home .jbs-flow__go:focus-visible,
+.jbs-home .jbs-more:active,
+.jbs-home .jbs-flow__go:active {
+  color: var(--jbs-brand) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-decoration: none !important;
+}
+
+.jbs-home .jbs-more::before,
+.jbs-home .jbs-flow__go::before {
+  content: "≫" !important;
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 2px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  transform: none !important;
+  color: var(--jbs-brand) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+}
+
+.jbs-home .jbs-more::after,
+.jbs-home .jbs-flow__go::after {
+  content: none !important;
+  display: none !important;
+}
