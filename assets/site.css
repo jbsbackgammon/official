@@ -3454,3 +3454,56 @@ body.jbs-home {
     border-bottom: 0 !important;
   }
 }
+
+
+/* ==========================================================================
+   競技情報：小見出し背景を列幅いっぱいに連続表示
+   ========================================================================== */
+
+@media (min-width:1101px) {
+  .jbs-competition-grid {
+    gap: 0 !important;
+  }
+
+  .jbs-competition-group + .jbs-competition-group {
+    padding-left: 0 !important;
+    border-left: 1px solid var(--jbs-line) !important;
+  }
+
+  .jbs-dashboard-subhd,
+  .jbs-dashboard-subtitle {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width:1100px) and (min-width:601px) {
+  .jbs-competition-grid {
+    gap: 0 !important;
+  }
+
+  .jbs-competition-group + .jbs-competition-group {
+    padding-left: 0 !important;
+  }
+
+  .jbs-competition-grid > .jbs-competition-group:nth-child(2) {
+    border-left: 1px solid var(--jbs-line) !important;
+  }
+
+  .jbs-title-groups {
+    gap: 0 !important;
+  }
+
+  .jbs-title-groups .jbs-champion-group + .jbs-champion-group {
+    padding-left: 0 !important;
+    border-left: 1px solid var(--jbs-line) !important;
+  }
+}
+
+@media (max-width:600px) {
+  .jbs-dashboard-subhd,
+  .jbs-dashboard-subtitle {
+    width: 100% !important;
+  }
+}
