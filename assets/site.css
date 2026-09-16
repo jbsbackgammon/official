@@ -3612,12 +3612,12 @@ body.jbs-home {
   font-weight: 700 !important;
 }
 
-
 /* ==========================================================================
-   PICK UP：スライド移動中も角丸を維持
-   「バックギャモンをやってみよう！」カードと同じ 3px に統一
+   FINAL OVERRIDES / COMMON UTILITIES
+   2026-09 cleanup: v103-v117 の重複上書きを目的別に集約
    ========================================================================== */
 
+/* ---------- PICK UP banner ---------- */
 .jbs-vb__item {
   border-radius: 3px !important;
   overflow: hidden !important;
@@ -3630,11 +3630,7 @@ body.jbs-home {
   border-radius: 2px !important;
 }
 
-
-/* ==========================================================================
-   ビッグメニュー：ページ構成改修案（2026-09）
-   ========================================================================== */
-
+/* ---------- Mega menu ---------- */
 @media (min-width:901px) {
   .jbs-mega__inner--3equal {
     grid-template-columns: repeat(3,minmax(0,1fr)) !important;
@@ -3697,6 +3693,25 @@ body.jbs-home {
     font-weight: 400;
     white-space: nowrap;
   }
+
+  /* 「バックギャモンで遊ぶ」は項目長に応じて中央列へ幅を優先配分 */
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__inner {
+    grid-template-columns:
+      minmax(max-content,.8fr)
+      minmax(0,2.4fr)
+      minmax(max-content,.8fr) !important;
+    gap: 20px !important;
+  }
+
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] :is(.jbs-mega__group h3,.jbs-mega__group a) {
+    white-space: nowrap !important;
+  }
+
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group--2col {
+    grid-template-columns: repeat(2,max-content) !important;
+    justify-content: start !important;
+    column-gap: 28px !important;
+  }
 }
 
 @media (max-width:900px) {
@@ -3718,88 +3733,22 @@ body.jbs-home {
   }
 }
 
-
-/* ==========================================================================
-   ビッグメニュー：項目長に応じた自動幅調整
-   「バックギャモンで遊ぶ」は中央のJBS公認例会に必要幅を優先配分
-   ========================================================================== */
-
-@media (min-width:901px) {
-  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__inner {
-    grid-template-columns:
-      minmax(max-content, .8fr)
-      minmax(0, 2.4fr)
-      minmax(max-content, .8fr) !important;
-    gap: 20px !important;
-  }
-
-  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group h3,
-  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group a {
-    white-space: nowrap !important;
-  }
-
-  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group--2col {
-    grid-template-columns: repeat(2, max-content) !important;
-    justify-content: space-between !important;
-    column-gap: 20px !important;
-  }
+/* ---------- SNS icons ---------- */
+:where(.jbs-hd__sns,.jbs-drawer__sns) a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-
-/* ==========================================================================
-   ビッグメニュー：同一小項目内の2列間隔を適正化
-   ========================================================================== */
-
-@media (min-width:901px) {
-  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group--2col {
-    grid-template-columns: repeat(2, max-content) !important;
-    justify-content: start !important;
-    column-gap: 28px !important;
-  }
+:where(.jbs-hd__sns,.jbs-drawer__sns) a[aria-label="YouTube"] img {
+  width: auto !important;
+  height: 24px !important;
 }
 
-
-/* ==========================================================================
-   SNSロゴ：現行グリフへ統一 / 見た目の高さを揃える
-   ========================================================================== */
-
-@media (min-width:901px) {
-  .jbs-hd__sns a {
-    width: auto !important;
-    min-width: 42px !important;
-    height: 38px !important;
-    padding: 0 2px !important;
-  }
-
-  .jbs-hd__sns img {
-    width: auto !important;
-    height: 30px !important;
-    max-width: none !important;
-    object-fit: contain !important;
-  }
+:where(.jbs-hd__sns,.jbs-drawer__sns) a:is([aria-label="X"],[aria-label="Instagram"],[aria-label="Facebook"]) img {
+  width: auto !important;
+  height: 28px !important;
 }
-
-@media (max-width:900px) {
-  .jbs-drawer__sns a {
-    width: auto !important;
-    min-width: 46px !important;
-    height: 46px !important;
-    padding: 0 !important;
-  }
-
-  .jbs-drawer__sns img {
-    width: auto !important;
-    height: 32px !important;
-    max-width: none !important;
-    object-fit: contain !important;
-  }
-}
-
-
-/* ==========================================================================
-   SNSロゴ：光学的サイズ調整
-   各ロゴの外形ではなく、並べたときの見た目の面積・重さを揃える
-   ========================================================================== */
 
 @media (min-width:901px) {
   .jbs-hd__sns a {
@@ -3808,26 +3757,6 @@ body.jbs-home {
     height: 38px !important;
     padding: 0 !important;
   }
-
-  .jbs-hd__sns a[aria-label="YouTube"] img {
-    width: 32px !important;
-    height: 24px !important;
-  }
-
-  .jbs-hd__sns a[aria-label="X"] img {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .jbs-hd__sns a[aria-label="Instagram"] img {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .jbs-hd__sns a[aria-label="Facebook"] img {
-    width: 28px !important;
-    height: 28px !important;
-  }
 }
 
 @media (max-width:900px) {
@@ -3835,97 +3764,66 @@ body.jbs-home {
     width: 46px !important;
     min-width: 46px !important;
     height: 46px !important;
-  }
-
-  .jbs-drawer__sns a[aria-label="YouTube"] img {
-    width: 36px !important;
-    height: 26px !important;
-  }
-
-  .jbs-drawer__sns a[aria-label="X"] img {
-    width: 32px !important;
-    height: 32px !important;
-  }
-
-  .jbs-drawer__sns a[aria-label="Instagram"] img {
-    width: 32px !important;
-    height: 32px !important;
-  }
-
-  .jbs-drawer__sns a[aria-label="Facebook"] img {
-    width: 32px !important;
-    height: 32px !important;
+    padding: 0 !important;
   }
 }
 
-
-/* ==========================================================================
-   SNSロゴ：最終サイズ調整
-   YouTube 24px / X・Instagram・Facebook 28px
-   ========================================================================== */
-
-.jbs-hd__sns a,
-.jbs-drawer__sns a {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+/* ---------- STEP cards ---------- */
+.jbs-flow__num {
+  left: 8px !important;
+  top: 8px !important;
+  bottom: auto !important;
 }
 
-.jbs-hd__sns a[aria-label="YouTube"] img,
-.jbs-drawer__sns a[aria-label="YouTube"] img {
-  width: auto !important;
-  height: 24px !important;
-}
-
-.jbs-hd__sns a[aria-label="X"] img,
-.jbs-hd__sns a[aria-label="Instagram"] img,
-.jbs-hd__sns a[aria-label="Facebook"] img,
-.jbs-drawer__sns a[aria-label="X"] img,
-.jbs-drawer__sns a[aria-label="Instagram"] img,
-.jbs-drawer__sns a[aria-label="Facebook"] img {
-  width: auto !important;
-  height: 28px !important;
-}
-
-
-/* ==========================================================================
-   Tablet：JBS競技情報の中央罫線位置を上下で統一
-   / 今日のポジションを横並び化
-   ========================================================================== */
-
+/* ---------- Tablet: competition + position ---------- */
 @media (min-width:601px) and (max-width:1100px) {
-  /* 上段2列と下段2列を同一の基準幅にする */
   .jbs-competition-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 16px !important;
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    column-gap: 0 !important;
+    row-gap: 18px !important;
+    align-items: start !important;
   }
 
-  /* title-groups 自体に入っていた左余白を除去し、
-     内部2列の中央線を上段の中央線と同じX座標に合わせる */
+  /* title-groupsを親2列グリッドへ展開し、上下段の中央線を同一座標にする */
   .jbs-title-groups {
-    grid-column: 1 / -1 !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 16px !important;
-    padding-left: 0 !important;
-    border-left: 0 !important;
-    box-sizing: border-box !important;
+    display: contents !important;
+    grid-column: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
   }
 
-  .jbs-title-groups .jbs-champion-group {
+  .jbs-competition-grid > .jbs-competition-group,
+  .jbs-title-groups > .jbs-champion-group {
     min-width: 0 !important;
     box-sizing: border-box !important;
+    padding-left: 0 !important;
+    border-left: 0 !important;
   }
 
-  .jbs-title-groups .jbs-champion-group + .jbs-champion-group {
+  .jbs-competition-grid > .jbs-competition-group:first-child,
+  .jbs-title-groups > .jbs-champion-group:first-child {
+    padding-right: 16px !important;
+    border-right: 1px solid var(--jbs-line) !important;
+  }
+
+  .jbs-competition-grid > .jbs-competition-group:nth-child(2),
+  .jbs-title-groups > .jbs-champion-group + .jbs-champion-group {
     padding-left: 16px !important;
-    border-left: 1px solid var(--jbs-line) !important;
+    border-left: 0 !important;
   }
 
-  /* 今日のポジション：
-     左＝盤面（最大520px）、右＝選択肢 */
+  :is(.jbs-dashboard-subhd,.jbs-dashboard-subtitle) {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 今日のポジション：左に盤面、右に4択 */
   .jbs-position-card {
     display: grid !important;
-    grid-template-columns: minmax(0, 520px) minmax(220px, 1fr) !important;
+    grid-template-columns: minmax(0,520px) minmax(220px,1fr) !important;
     grid-template-areas:
       "position-head position-head"
       "position-board position-choices" !important;
@@ -3948,9 +3846,9 @@ body.jbs-home {
   }
 
   .jbs-position-card .jbs-position img {
+    display: block !important;
     width: 100% !important;
     height: auto !important;
-    display: block !important;
   }
 
   .jbs-position-card .jbs-position__choices {
@@ -3973,77 +3871,7 @@ body.jbs-home {
   }
 }
 
-
-/* ==========================================================================
-   v112 Tablet tuning
-   - JBS競技情報：上下段の中央縦罫線位置と横罫線長を統一
-   - 今日のポジション：タブレット横並びは維持
-   ========================================================================== */
-
-@media (min-width:601px) and (max-width:1100px) {
-  .jbs-competition-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    column-gap: 0 !important;
-    row-gap: 18px !important;
-    align-items: start !important;
-  }
-
-  /* タイトル群は親グリッドの2列目に直接載せ、上下で同じ2分割位置を使う */
-  .jbs-title-groups {
-    display: contents !important;
-    grid-column: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: 0 !important;
-  }
-
-  .jbs-competition-grid > .jbs-competition-group,
-  .jbs-title-groups > .jbs-champion-group {
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    padding-left: 0 !important;
-    border-left: 0 !important;
-  }
-
-  /* 左列：右にだけ中央縦線を置く */
-  .jbs-competition-grid > .jbs-competition-group:first-child,
-  .jbs-title-groups > .jbs-champion-group:first-child {
-    padding-right: 16px !important;
-    border-right: 1px solid var(--jbs-line) !important;
-  }
-
-  /* 右列：左余白だけ確保 */
-  .jbs-competition-grid > .jbs-competition-group:nth-child(2),
-  .jbs-title-groups > .jbs-champion-group + .jbs-champion-group {
-    padding-left: 16px !important;
-    border-left: 0 !important;
-  }
-
-  /* 下段小見出しの罫線長も上段と同じ見え方に揃える */
-  .jbs-dashboard-subhd,
-  .jbs-dashboard-subtitle {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-  }
-}
-
-
-/* ==========================================================================
-   v113
-   - Tablet footer: smartphone layoutに準拠
-   - STEPラベル: PC / Tablet / SP 共通で左上へ
-   ========================================================================== */
-
-/* STEPラベルはページ名と重ならないよう左上固定 */
-.jbs-flow__num {
-  left: 8px !important;
-  top: 8px !important;
-  bottom: auto !important;
-}
-
-/* Tablet footer：SP版と同じ情報の分け方・余白感に統一 */
+/* ---------- Tablet footer ---------- */
 @media (min-width:601px) and (max-width:1100px) {
   .jbs-ft--compact {
     padding: 16px 0 14px !important;
@@ -4114,63 +3942,9 @@ body.jbs-home {
   }
 }
 
-
-/* ==========================================================================
-   v114
-   PC / Tablet / SP 共通：「≫」マーカーをJBSピンクに統一
-   ========================================================================== */
-
-.jbs-more::before,
-.jbs-flow__go::before,
-.jbs-more:hover::before,
-.jbs-more:focus-visible::before,
-.jbs-flow__go:hover::before,
-.jbs-flow__go:focus-visible::before {
-  color: var(--jbs-brand) !important;
-}
-
-
-/* ==========================================================================
-   v115
-   PC / Tablet / SP 共通：「≫」リンク全体をJBSピンクに統一
-   ========================================================================== */
-
-.jbs-more,
-.jbs-flow__go,
-.jbs-more:visited,
-.jbs-flow__go:visited,
-.jbs-more:hover,
-.jbs-flow__go:hover,
-.jbs-more:focus-visible,
-.jbs-flow__go:focus-visible {
-  color: var(--jbs-brand) !important;
-}
-
-.jbs-more::before,
-.jbs-flow__go::before {
-  color: var(--jbs-brand) !important;
-}
-
-
-/* ==========================================================================
-   v116
-   「≫系リンク」の最終共通スタイル
-   個別セクションの過去定義より優先し、PC / Tablet / SP で完全統一
-   ========================================================================== */
-
-.jbs-home .jbs-more,
-.jbs-home .jbs-flow__go,
-.jbs-home .jbs-more:link,
-.jbs-home .jbs-flow__go:link,
-.jbs-home .jbs-more:visited,
-.jbs-home .jbs-flow__go:visited,
-.jbs-home .jbs-more:hover,
-.jbs-home .jbs-flow__go:hover,
-.jbs-home .jbs-more:focus-visible,
-.jbs-home .jbs-flow__go:focus-visible,
-.jbs-home .jbs-more:active,
-.jbs-home .jbs-flow__go:active {
-  color: var(--jbs-brand) !important;
+/* ---------- Common arrow links (≫) ---------- */
+.jbs-home :where(.jbs-more,.jbs-flow__go) {
+  color: var(--jbs-ink) !important;
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 1.35 !important;
@@ -4178,8 +3952,11 @@ body.jbs-home {
   text-decoration: none !important;
 }
 
-.jbs-home .jbs-more::before,
-.jbs-home .jbs-flow__go::before {
+.jbs-home :where(.jbs-more,.jbs-flow__go):is(:hover,:focus-visible) {
+  color: var(--jbs-brand) !important;
+}
+
+.jbs-home :where(.jbs-more,.jbs-flow__go)::before {
   content: "≫" !important;
   display: inline-block !important;
   width: auto !important;
@@ -4195,44 +3972,7 @@ body.jbs-home {
   letter-spacing: 0 !important;
 }
 
-.jbs-home .jbs-more::after,
-.jbs-home .jbs-flow__go::after {
+.jbs-home :where(.jbs-more,.jbs-flow__go)::after {
   content: none !important;
   display: none !important;
-}
-
-
-/* ==========================================================================
-   v117
-   「≫系リンク」最終配色
-   - 記号：常時JBSピンク
-   - 文字：通常は黒、hover/focus時のみJBSピンク
-   PC / Tablet / SP 共通
-   ========================================================================== */
-
-.jbs-home .jbs-more,
-.jbs-home .jbs-flow__go,
-.jbs-home .jbs-more:link,
-.jbs-home .jbs-flow__go:link,
-.jbs-home .jbs-more:visited,
-.jbs-home .jbs-flow__go:visited,
-.jbs-home .jbs-more:active,
-.jbs-home .jbs-flow__go:active {
-  color: var(--jbs-ink) !important;
-}
-
-.jbs-home .jbs-more:hover,
-.jbs-home .jbs-flow__go:hover,
-.jbs-home .jbs-more:focus-visible,
-.jbs-home .jbs-flow__go:focus-visible {
-  color: var(--jbs-brand) !important;
-}
-
-.jbs-home .jbs-more::before,
-.jbs-home .jbs-flow__go::before,
-.jbs-home .jbs-more:hover::before,
-.jbs-home .jbs-flow__go:hover::before,
-.jbs-home .jbs-more:focus-visible::before,
-.jbs-home .jbs-flow__go:focus-visible::before {
-  color: var(--jbs-brand) !important;
 }
