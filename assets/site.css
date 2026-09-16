@@ -3972,3 +3972,59 @@ body.jbs-home {
     padding: 6px 10px !important;
   }
 }
+
+
+/* ==========================================================================
+   v112 Tablet tuning
+   - JBS競技情報：上下段の中央縦罫線位置と横罫線長を統一
+   - 今日のポジション：タブレット横並びは維持
+   ========================================================================== */
+
+@media (min-width:601px) and (max-width:1100px) {
+  .jbs-competition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 0 !important;
+    row-gap: 18px !important;
+    align-items: start !important;
+  }
+
+  /* タイトル群は親グリッドの2列目に直接載せ、上下で同じ2分割位置を使う */
+  .jbs-title-groups {
+    display: contents !important;
+    grid-column: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }
+
+  .jbs-competition-grid > .jbs-competition-group,
+  .jbs-title-groups > .jbs-champion-group {
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    border-left: 0 !important;
+  }
+
+  /* 左列：右にだけ中央縦線を置く */
+  .jbs-competition-grid > .jbs-competition-group:first-child,
+  .jbs-title-groups > .jbs-champion-group:first-child {
+    padding-right: 16px !important;
+    border-right: 1px solid var(--jbs-line) !important;
+  }
+
+  /* 右列：左余白だけ確保 */
+  .jbs-competition-grid > .jbs-competition-group:nth-child(2),
+  .jbs-title-groups > .jbs-champion-group + .jbs-champion-group {
+    padding-left: 16px !important;
+    border-left: 0 !important;
+  }
+
+  /* 下段小見出しの罫線長も上段と同じ見え方に揃える */
+  .jbs-dashboard-subhd,
+  .jbs-dashboard-subtitle {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
