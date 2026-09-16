@@ -1,7 +1,4 @@
-/* ================================================================
-   JBSトップページ 最終調整スタイル
-   サイト固有スタイル
-   ================================================================ */
+/* JBS トップページ固有スタイル */
 
 .jbs-hd__name {
   letter-spacing: .02em;
@@ -199,12 +196,9 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  width: 40px;
-  height: 40px;
   padding: 0;
   border: 1px solid rgba(0,0,0,.12);
   border-radius: 999px;
-  background: rgba(255,255,255,.94);
   color: #222;
   font-size: 18px;
   line-height: 1;
@@ -261,10 +255,6 @@
     height: 34px;
     font-size: 16px;
   }
-}
-
-.jbs-vb {
-  background: var(--jbs-paper);
 }
 
 .jbs-vb__nav:disabled {
@@ -553,10 +543,6 @@
   .jbs-hd .jbs-hd__logo img {
     height: 48px;
   }
-
-  .jbs-hd__name {
-    transform: translateY(4px);
-  }
 }
 
 @media (min-width:901px) and (max-width:1100px) {
@@ -567,11 +553,7 @@
 
 @media (min-width:901px) {
   .jbs-gnav .jbs-gnav__list > li > a {
-    box-sizing: border-box;
     padding: 0 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -608,13 +590,6 @@
   .jbs-gnav__list,
   .jbs-gnav__list > li {
     height: 50px !important;
-  }
-
-  .jbs-gnav .jbs-gnav__list > li > a {
-    height: 50px !important;
-    min-height: 50px !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
   }
 }
 
@@ -805,15 +780,6 @@
 }
 
 @media (max-width:600px) {
-  .jbs-newslist--singleline > li > a {
-    gap: 6px;
-    padding: 5px 2px;
-  }
-
-  .jbs-newslist--singleline .jbs-newsline__title {
-    font-size: 14px;
-  }
-
   .jbs-fresh {
     min-width: 36px;
     padding: 2px 4px;
@@ -924,12 +890,6 @@
   }
 }
 
-@media (max-width:600px) {
-  .jbs-newslist--singleline time {
-    font-size: 14px !important;
-  }
-}
-
 .jbs-dashboard-grid {
   display: grid;
 }
@@ -1033,7 +993,6 @@
 .jbs-position__choices {
   display: grid;
   padding-top: 6px;
-  border-top: 1px solid var(--jbs-line);
 }
 
 .jbs-position__choices button {
@@ -1088,7 +1047,6 @@
 @media (max-width:600px) {
   .jbs-newslist--singleline > li > a {
     height: 34px !important;
-    min-height: 34px !important;
   }
 }
 
@@ -1115,12 +1073,6 @@
   text-align: center !important;
 }
 
-@media (max-width:600px) {
-  .jbs-ft--compact .jbs-ft__row--utility {
-    gap: 8px !important;
-  }
-}
-
 .jbs-newscols--dual .jbs-sec__hd,
 .jbs-dashboard-card .jbs-sec__hd {
   margin-bottom: 0 !important;
@@ -1145,10 +1097,6 @@
   box-sizing: border-box !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-}
-
-.jbs-dash-list--champions > li.jbs-dash__dualwinner {
-  border-bottom: 0 !important;
 }
 
 .jbs-position {
@@ -1475,30 +1423,9 @@
 }
 
 @media (max-width:600px) {
-  .jbs-newslist--notice > li,
-  .jbs-newslist--notice > li > a {
-    height: auto !important;
-    min-height: 34px !important;
-  }
-
   .jbs-newslist--notice > li > a {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
-    align-items: start !important;
-  }
-
-  .jbs-newslist--notice .jbs-newsline__title {
-    overflow: visible !important;
-    white-space: normal !important;
-    text-overflow: clip !important;
-    line-height: 1.45 !important;
-  }
-
-  .jbs-newslist--notice time,
-  .jbs-newslist--notice .jbs-newslabel,
-  .jbs-newslist--notice .jbs-fresh {
-    align-self: start !important;
-    margin-top: 1px;
   }
 }
 
@@ -1685,14 +1612,6 @@
   min-width: 0 !important;
 }
 
-@media (max-width:600px) {
-  .jbs-newslist--notice .jbs-newslabel {
-    max-width: none !important;
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-  }
-}
-
 .jbs-ft--compact .jbs-ft__row--desc,
 .jbs-ft--compact .jbs-ft__row--utility {
   min-height: 28px !important;
@@ -1734,16 +1653,6 @@
   .jbs-ft--compact .jbs-ft__row--desc,
   .jbs-ft--compact .jbs-ft__row--utility {
     min-height: 28px !important;
-  }
-
-  .jbs-newslist--notice > li > a {
-    column-gap: 0 !important;
-  }
-
-  .jbs-newslist--notice .jbs-newslabel {
-    width: 5.5em !important;
-    margin-left: 5px !important;
-    margin-right: 5px !important;
   }
 }
 
@@ -2122,39 +2031,11 @@ body.jbs-home {
   }
 }
 
-.jbs-vb {
-  padding-top: 14px !important;
-  padding-bottom: 10px !important;
-}
-
 .jbs-vb__item {
   box-sizing: border-box !important;
   border: 1px solid rgba(31,34,38,.12) !important;
-  border-radius: 10px !important;
   background: #fff !important;
-  box-shadow: 0 3px 10px rgba(16,18,21,.10) !important;
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease !important;
-}
-
-.jbs-vb__item img {
-  border-radius: 9px !important;
-}
-
-@media (hover:hover) and (pointer:fine) {
-  .jbs-vb__item:hover {
-    transform: translateY(-2px);
-    border-color: rgba(200,16,90,.28) !important;
-    box-shadow: 0 6px 16px rgba(16,18,21,.12) !important;
-  }
-}
-
-.jbs-vb__nav {
-  border-color: rgba(31,34,38,.14) !important;
-  box-shadow: 0 3px 10px rgba(16,18,21,.10) !important;
-}
-
-.jbs-vb__dots {
-  margin-top: 8px !important;
 }
 
 .jbs-sec__titlelink {
@@ -2218,11 +2099,6 @@ body.jbs-home {
 }
 
 @media (max-width:600px) {
-  .jbs-vb {
-    padding-top: 12px !important;
-    padding-bottom: 6px !important;
-  }
-
   .jbs-vb__item {
     border-radius: 10px !important;
   }
@@ -2330,25 +2206,19 @@ body.jbs-home {
 }
 
 .jbs-more--position-history {
-  display: inline-flex !important;
-  align-items: center !important;
-  margin-left: auto !important;
   flex: 0 0 auto !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
 }
-
 
 /* ==========================================================================
    バナースライダー表示枚数
    PC 4枚 / Tablet 2枚 / SP 1枚
    ========================================================================== */
-@media (min-width:601px) and (max-width:900px){
-  .jbs-vb__item{
-    flex-basis:calc((100% - 16px) / 2) !important;
+
+@media (min-width:601px) and (max-width:900px) {
+  .jbs-vb__item {
+    flex-basis: calc((100% - 16px) / 2) !important;
   }
 }
-
 
 /* ==========================================================================
    ヒーローとバナーの役割を分離
@@ -2356,186 +2226,177 @@ body.jbs-home {
    ========================================================================== */
 
 /* ヒーロー直下に「情報帯」として独立させる */
-.jbs-vb{
-  padding-top:20px !important;
-  padding-bottom:20px !important;
-  background:#fff !important;
+
+.jbs-vb {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 /* PICK UP 見出し */
-.jbs-vb__title{
-  margin:0 0 10px !important;
-  padding:0 !important;
-  color:var(--jbs-ink-2);
-  font-size:14px !important;
-  font-weight:700;
-  line-height:1.2;
-  letter-spacing:.12em;
+
+.jbs-vb__title {
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  color: var(--jbs-ink-2);
+  font-size: 14px !important;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .12em;
 }
 
 /* バナーを少し小さくし、広告感を弱める */
-@media (min-width:901px){
-  .jbs-vb__mask{
-    margin-left:64px !important;
-    margin-right:64px !important;
-  }
+
+.jbs-vb__item {
+  border-color: rgba(31,34,38,.10) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 6px rgba(16,18,21,.07) !important;
 }
 
-.jbs-vb__item{
-  border-color:rgba(31,34,38,.10) !important;
-  border-radius:8px !important;
-  box-shadow:0 2px 6px rgba(16,18,21,.07) !important;
+.jbs-vb__item img {
+  border-radius: 7px !important;
 }
 
-.jbs-vb__item img{
-  border-radius:7px !important;
-}
-
-@media (hover:hover) and (pointer:fine){
-  .jbs-vb__item:hover{
-    transform:translateY(-1px) !important;
-    border-color:rgba(200,16,90,.22) !important;
-    box-shadow:0 4px 10px rgba(16,18,21,.09) !important;
+@media (hover:hover) and (pointer:fine) {
+  .jbs-vb__item:hover {
+    transform: translateY(-1px) !important;
+    border-color: rgba(200,16,90,.22) !important;
+    box-shadow: 0 4px 10px rgba(16,18,21,.09) !important;
   }
 }
 
 /* ナビも主張を少し抑える */
-.jbs-vb__nav{
-  width:36px !important;
-  height:36px !important;
-  border-color:rgba(31,34,38,.12) !important;
-  box-shadow:0 2px 7px rgba(16,18,21,.08) !important;
-  background:rgba(255,255,255,.96) !important;
+
+.jbs-vb__nav {
+  width: 36px !important;
+  height: 36px !important;
+  border-color: rgba(31,34,38,.12) !important;
+  box-shadow: 0 2px 7px rgba(16,18,21,.08) !important;
+  background: rgba(255,255,255,.96) !important;
 }
 
 /* ドットも情報帯の中で控えめに */
-.jbs-vb__dots{
-  margin-top:8px !important;
+
+.jbs-vb__dots {
+  margin-top: 8px !important;
 }
 
 /* タブレット：2枚表示は維持しつつ余白を確保 */
-@media (min-width:601px) and (max-width:900px){
-  .jbs-vb{
-    padding-top:18px !important;
-    padding-bottom:18px !important;
+
+@media (min-width:601px) and (max-width:900px) {
+  .jbs-vb {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
   }
 
-  .jbs-vb__mask{
-    margin-left:48px !important;
-    margin-right:48px !important;
-  }
-
-  .jbs-vb__title{
-    font-size:14px !important;
+  .jbs-vb__title {
+    font-size: 14px !important;
   }
 }
 
 /* スマホ：1枚表示、見出しを少し小さく */
-@media (max-width:600px){
-  .jbs-vb{
-    padding-top:16px !important;
-    padding-bottom:14px !important;
+
+@media (max-width:600px) {
+  .jbs-vb {
+    padding-top: 16px !important;
+    padding-bottom: 14px !important;
   }
 
-  .jbs-vb__title{
-    margin-bottom:8px !important;
-    font-size:12px !important;
-  }
-
-  .jbs-vb__mask{
-    margin-left:42px !important;
-    margin-right:42px !important;
+  .jbs-vb__title {
+    margin-bottom: 8px !important;
+    font-size: 12px !important;
   }
 }
-
 
 /* ==========================================================================
    PICK UP 見出しを他セクションと統一
    ========================================================================== */
-.jbs-vb__hd{
-  margin-bottom:10px !important;
-  padding-bottom:6px !important;
+
+.jbs-vb__hd {
+  margin-bottom: 10px !important;
+  padding-bottom: 6px !important;
 }
 
-.jbs-vb__hd h2{
-  margin:0 !important;
-  color:inherit !important;
-  font-size:18px !important;
-  font-weight:700 !important;
-  line-height:1.35 !important;
-  letter-spacing:0 !important;
+.jbs-vb__hd h2 {
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
 }
 
-@media (max-width:600px){
-  .jbs-vb__hd{
-    margin-bottom:8px !important;
-    padding-bottom:6px !important;
+@media (max-width:600px) {
+  .jbs-vb__hd {
+    margin-bottom: 8px !important;
+    padding-bottom: 6px !important;
   }
 
-  .jbs-vb__hd h2{
-    font-size:16px !important;
+  .jbs-vb__hd h2 {
+    font-size: 16px !important;
   }
 }
-
 
 /* ==========================================================================
    PICK UP背景・詳細リンク表現を全体統一
    ========================================================================== */
 
 /* PICK UP背景を他の本文エリアと同じ背景へ */
-.jbs-vb{
-  background:var(--jbs-paper) !important;
+
+.jbs-vb {
+  background: var(--jbs-paper) !important;
 }
 
 /* 詳細リンクの記号を「≫」に統一 */
+
 .jbs-more::before,
-.jbs-flow__go::before{
-  content:"≫" !important;
-  display:inline-block !important;
-  width:auto !important;
-  height:auto !important;
-  margin:0 2px 0 0 !important;
-  padding:0 !important;
-  border:0 !important;
-  transform:none !important;
-  color:var(--jbs-brand) !important;
-  font-weight:700 !important;
-  line-height:1 !important;
-  letter-spacing:0 !important;
+.jbs-flow__go::before {
+  content: "≫" !important;
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 2px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  transform: none !important;
+  color: var(--jbs-brand) !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
 }
 
 /* 既存の疑似矢印を無効化 */
+
 .jbs-more::after,
-.jbs-flow__go::after{
-  content:none !important;
-  display:none !important;
+.jbs-flow__go::after {
+  content: none !important;
+  display: none !important;
 }
 
 /* 「過去のお題」も他の詳細リンクと同じスタイルへ */
-.jbs-more--position-history{
-  display:inline-flex !important;
-  align-items:center !important;
-  gap:0 !important;
-  margin-left:auto !important;
-  padding:0 !important;
-  color:var(--jbs-ink-2) !important;
-  font-size:14px !important;
-  font-weight:400 !important;
-  line-height:1.35 !important;
-  text-decoration:none !important;
+
+.jbs-more--position-history {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  margin-left: auto !important;
+  padding: 0 !important;
+  color: var(--jbs-ink-2) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
 }
 
-.jbs-more--position-history:hover{
-  color:var(--jbs-brand) !important;
+.jbs-more--position-history:hover {
+  color: var(--jbs-brand) !important;
 }
 
 /* STEPリンクも「≫ラベル」の詰まった見え方に統一 */
+
 .jbs-flow__go--overlay,
-.jbs-flow__go--body{
-  gap:0 !important;
+.jbs-flow__go--body {
+  gap: 0 !important;
 }
-
-
 
 /* ==========================================================================
    セクション見出し・右側リンクを完全統一
@@ -2546,98 +2407,104 @@ body.jbs-home {
    ========================================================================== */
 
 /* 見出し行そのものを共通化 */
+
 .jbs-vb__hd,
 .jbs-newscols .jbs-sec__hd,
 .jbs-start-full .jbs-sec__hd,
-.jbs-dashboard-grid .jbs-sec__hd{
-  display:flex !important;
-  align-items:center !important;
-  justify-content:space-between !important;
-  gap:10px !important;
-  min-height:32px !important;
-  margin:0 0 8px !important;
-  padding:0 0 6px !important;
-  border-bottom:1px solid var(--jbs-line) !important;
-  box-sizing:border-box !important;
+.jbs-dashboard-grid .jbs-sec__hd {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  min-height: 32px !important;
+  margin: 0 0 8px !important;
+  padding: 0 0 6px !important;
+  border-bottom: 1px solid var(--jbs-line) !important;
+  box-sizing: border-box !important;
 }
 
 /* 8項目のタイトルを同一タイポグラフィへ */
+
 .jbs-vb__hd h2,
 .jbs-newscols .jbs-sec__hd h2,
 .jbs-start-full .jbs-sec__hd h2,
-.jbs-dashboard-grid .jbs-sec__hd h2{
-  flex:0 1 auto !important;
-  min-width:0 !important;
-  margin:0 !important;
-  padding:0 !important;
-  color:var(--jbs-ink) !important;
-  font-size:18px !important;
-  font-weight:700 !important;
-  line-height:1.35 !important;
-  letter-spacing:0 !important;
+.jbs-dashboard-grid .jbs-sec__hd h2 {
+  flex: 0 1 auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--jbs-ink) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
 }
 
 /* タイトル自体がリンクの場合も見た目を同一化 */
+
 .jbs-vb__hd h2 a,
 .jbs-newscols .jbs-sec__hd h2 a,
 .jbs-start-full .jbs-sec__hd h2 a,
 .jbs-dashboard-grid .jbs-sec__hd h2 a,
-.jbs-sec__titlelink{
-  color:inherit !important;
-  font:inherit !important;
-  line-height:inherit !important;
-  letter-spacing:inherit !important;
-  text-decoration:none !important;
+.jbs-sec__titlelink {
+  color: inherit !important;
+  font: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  text-decoration: none !important;
 }
 
 /* PCでタイトルリンクに付けていた小矢印は削除。
    詳細導線の記号は右側リンクの「≫」に統一する */
-.jbs-sec__titlelink::after{
-  content:none !important;
-  display:none !important;
+
+.jbs-sec__titlelink::after {
+  content: none !important;
+  display: none !important;
 }
 
 /* 右側リンクを全セクションで統一 */
+
 .jbs-vb__hd .jbs-more,
 .jbs-newscols .jbs-sec__hd .jbs-more,
 .jbs-start-full .jbs-sec__hd .jbs-more,
 .jbs-dashboard-grid .jbs-sec__hd .jbs-more,
 .jbs-more--sp,
-.jbs-more--position-history{
-  display:inline-flex !important;
-  align-items:center !important;
-  flex:0 0 auto !important;
-  gap:0 !important;
-  margin:0 0 0 auto !important;
-  padding:0 !important;
-  color:var(--jbs-ink-2) !important;
-  font-size:14px !important;
-  font-weight:400 !important;
-  line-height:1.35 !important;
-  letter-spacing:0 !important;
-  text-decoration:none !important;
-  white-space:nowrap !important;
+.jbs-more--position-history {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  gap: 0 !important;
+  margin: 0 0 0 auto !important;
+  padding: 0 !important;
+  color: var(--jbs-ink-2) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
 }
 
 /* 右側リンク記号はすべて「≫」 */
+
 .jbs-vb__hd .jbs-more::before,
 .jbs-newscols .jbs-sec__hd .jbs-more::before,
 .jbs-start-full .jbs-sec__hd .jbs-more::before,
 .jbs-dashboard-grid .jbs-sec__hd .jbs-more::before,
 .jbs-more--sp::before,
-.jbs-more--position-history::before{
-  content:"≫" !important;
-  display:inline-block !important;
-  width:auto !important;
-  height:auto !important;
-  margin:0 2px 0 0 !important;
-  padding:0 !important;
-  border:0 !important;
-  transform:none !important;
-  color:var(--jbs-brand) !important;
-  font-weight:700 !important;
-  line-height:1 !important;
-  letter-spacing:0 !important;
+.jbs-more--position-history::before {
+  content: "≫" !important;
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 2px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  transform: none !important;
+  color: var(--jbs-brand) !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
 }
 
 .jbs-vb__hd .jbs-more::after,
@@ -2645,39 +2512,40 @@ body.jbs-home {
 .jbs-start-full .jbs-sec__hd .jbs-more::after,
 .jbs-dashboard-grid .jbs-sec__hd .jbs-more::after,
 .jbs-more--sp::after,
-.jbs-more--position-history::after{
-  content:none !important;
-  display:none !important;
+.jbs-more--position-history::after {
+  content: none !important;
+  display: none !important;
 }
 
-@media (hover:hover) and (pointer:fine){
+@media (hover:hover) and (pointer:fine) {
   .jbs-vb__hd .jbs-more:hover,
   .jbs-newscols .jbs-sec__hd .jbs-more:hover,
   .jbs-start-full .jbs-sec__hd .jbs-more:hover,
   .jbs-dashboard-grid .jbs-sec__hd .jbs-more:hover,
   .jbs-more--sp:hover,
-  .jbs-more--position-history:hover{
-    color:var(--jbs-brand) !important;
+  .jbs-more--position-history:hover {
+    color: var(--jbs-brand) !important;
   }
 }
 
 /* SPも全セクション同一 */
-@media (max-width:600px){
+
+@media (max-width:600px) {
   .jbs-vb__hd,
   .jbs-newscols .jbs-sec__hd,
   .jbs-start-full .jbs-sec__hd,
-  .jbs-dashboard-grid .jbs-sec__hd{
-    gap:8px !important;
-    min-height:30px !important;
-    margin-bottom:8px !important;
-    padding-bottom:6px !important;
+  .jbs-dashboard-grid .jbs-sec__hd {
+    gap: 8px !important;
+    min-height: 30px !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 6px !important;
   }
 
   .jbs-vb__hd h2,
   .jbs-newscols .jbs-sec__hd h2,
   .jbs-start-full .jbs-sec__hd h2,
-  .jbs-dashboard-grid .jbs-sec__hd h2{
-    font-size:16px !important;
+  .jbs-dashboard-grid .jbs-sec__hd h2 {
+    font-size: 16px !important;
   }
 
   .jbs-vb__hd .jbs-more,
@@ -2685,36 +2553,36 @@ body.jbs-home {
   .jbs-start-full .jbs-sec__hd .jbs-more,
   .jbs-dashboard-grid .jbs-sec__hd .jbs-more,
   .jbs-more--sp,
-  .jbs-more--position-history{
-    font-size:14px !important;
+  .jbs-more--position-history {
+    font-size: 14px !important;
   }
 }
-
 
 /* ==========================================================================
    セクション見出し左アクセントとの重なりを解消
    ========================================================================== */
 
 /* 全8項目で左アクセント線とタイトル文字の間隔を統一 */
+
 .jbs-vb__hd h2,
 .jbs-newscols .jbs-sec__hd h2,
 .jbs-start-full .jbs-sec__hd h2,
-.jbs-dashboard-grid .jbs-sec__hd h2{
-  position:relative !important;
-  padding-left:14px !important;
+.jbs-dashboard-grid .jbs-sec__hd h2 {
+  position: relative !important;
+  padding-left: 14px !important;
 }
 
 /* 左アクセント線も全8項目で同一位置 */
+
 .jbs-vb__hd h2::before,
 .jbs-newscols .jbs-sec__hd h2::before,
 .jbs-start-full .jbs-sec__hd h2::before,
-.jbs-dashboard-grid .jbs-sec__hd h2::before{
-  left:0 !important;
-  top:.2em !important;
-  width:4px !important;
-  height:1em !important;
+.jbs-dashboard-grid .jbs-sec__hd h2::before {
+  left: 0 !important;
+  top: .2em !important;
+  width: 4px !important;
+  height: 1em !important;
 }
-
 
 /* ==========================================================================
    一覧1行目の高さ統一 / ダッシュボード最終行罫線
@@ -2722,557 +2590,506 @@ body.jbs-home {
 
 /* 見出し下の余白が1行目だけ高く見える原因だったため、
    一覧系ブロックでは見出し下余白をなくし、1行目を2行目以降と同じ高さにする */
+
 .jbs-newscols .jbs-sec__hd,
-.jbs-dashboard-grid .jbs-sec__hd{
-  margin-bottom:0 !important;
+.jbs-dashboard-grid .jbs-sec__hd {
+  margin-bottom: 0 !important;
 }
 
 /* レーティング・今期ランキング・タイトル保持者は最終行にも下罫線を表示 */
-.jbs-dashboard-card:not(.jbs-position-card) .jbs-dash-list > li:last-child{
-  border-bottom:1px solid var(--jbs-line-2) !important;
-}
 
+.jbs-dashboard-card:not(.jbs-position-card) .jbs-dash-list > li:last-child {
+  border-bottom: 1px solid var(--jbs-line-2) !important;
+}
 
 /* ==========================================================================
    横罫線の色・太さをセクション見出し下と統一
    ========================================================================== */
 
 /* 本文内の横罫線は、見出し下と同じ 1px / var(--jbs-line) に統一 */
+
 .jbs-newslist--singleline > li,
 .jbs-dash-list > li,
 .jbs-dashboard-card:not(.jbs-position-card) .jbs-dash-list > li:last-child,
 .jbs-dash__linkrow,
-.jbs-position__choices{
-  border-color:var(--jbs-line) !important;
-  border-width:1px !important;
+.jbs-position__choices {
+  border-color: var(--jbs-line) !important;
+  border-width: 1px !important;
 }
 
 /* お知らせ・予定の各行 */
-.jbs-newslist--singleline > li{
-  border-bottom-style:solid !important;
-  border-bottom-color:var(--jbs-line) !important;
+
+.jbs-newslist--singleline > li {
+  border-bottom-style: solid !important;
+  border-bottom-color: var(--jbs-line) !important;
 }
 
 /* レーティング・ランキング・タイトル保持者の各行 */
-.jbs-dash-list > li{
-  border-bottom-style:solid !important;
-  border-bottom-color:var(--jbs-line) !important;
+
+.jbs-dash-list > li {
+  border-bottom-style: solid !important;
+  border-bottom-color: var(--jbs-line) !important;
 }
 
-/* 同一タイトルの複数優勝者間は従来どおり区切らない */
-.jbs-dash-list--champions > li.jbs-dash__dualwinner{
-  border-bottom:0 !important;
+/* 同一タイトルの複数優勝者間は区切らない */
+
+.jbs-dash-list--champions > li.jbs-dash__dualwinner {
+  border-bottom: 0 !important;
 }
 
 /* 今日のポジション：図の直下に罫線を密着 */
-.jbs-position{
-  margin-bottom:0 !important;
-  padding-bottom:0 !important;
+
+.jbs-position {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-.jbs-position__choices{
-  margin-top:0 !important;
-  border-top:1px solid var(--jbs-line) !important;
+.jbs-position__choices {
+  margin-top: 0 !important;
+  border-top: 1px solid var(--jbs-line) !important;
 }
-
 
 /* ==========================================================================
    スライダー左右余白を縮小し、バナーを少し大きく
    ========================================================================== */
-@media (min-width:901px){
-  .jbs-vb__mask{
-    margin-left:48px !important;
-    margin-right:48px !important;
+
+@media (min-width:901px) {
+  .jbs-vb__mask {
+    margin-left: 48px !important;
+    margin-right: 48px !important;
   }
 }
 
-@media (min-width:601px) and (max-width:900px){
-  .jbs-vb__mask{
-    margin-left:40px !important;
-    margin-right:40px !important;
+@media (min-width:601px) and (max-width:900px) {
+  .jbs-vb__mask {
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
 }
 
-@media (max-width:600px){
-  .jbs-vb__mask{
-    margin-left:36px !important;
-    margin-right:36px !important;
+@media (max-width:600px) {
+  .jbs-vb__mask {
+    margin-left: 36px !important;
+    margin-right: 36px !important;
   }
 }
-
 
 /* ==========================================================================
    SPお知らせ・イベント表示 / フッター整理
    ========================================================================== */
 
-@media (max-width:600px){
-
+@media (max-width:600px) {
   /* お知らせはPC版に準拠：
      日付・カテゴリ・タイトルを横並びの1行構成で統一 */
-  .jbs-newslist--singleline > li > a{
-    display:grid !important;
-    grid-template-columns:84px minmax(0,1fr) !important;
-    gap:0 10px !important;
-    min-height:36px !important;
-    padding:7px 4px !important;
-    align-items:center !important;
+
+  .jbs-newslist--singleline > li > a {
+    display: grid !important;
+    grid-template-columns: 84px minmax(0,1fr) !important;
+    gap: 0 10px !important;
+    min-height: 36px !important;
+    padding: 7px 4px !important;
+    align-items: center !important;
   }
 
-  .jbs-newslist--singleline time{
-    padding-top:.1em !important;
-    font-size:14px !important;
-    line-height:1.5 !important;
-    white-space:nowrap !important;
+  .jbs-newslist--singleline time {
+    padding-top: .1em !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    white-space: nowrap !important;
   }
 
-  .jbs-newslist--singleline .jbs-newsline__title{
-    min-width:0 !important;
-    font-size:14px !important;
-    line-height:1.5 !important;
+  .jbs-newslist--singleline .jbs-newsline__title {
+    min-width: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
   }
 
   /* 例会・イベント予定もPCの情報密度に準拠 */
-  .jbs-newslist--schedule > li > a{
-    grid-template-columns:84px minmax(0,1fr) auto !important;
-  }
 
   /* SPではイベント名を太字 */
-  .jbs-newslist--schedule .jbs-newsline__title{
-    font-weight:700 !important;
+
+  .jbs-newslist--schedule .jbs-newsline__title {
+    font-weight: 700 !important;
   }
 
   /* フッター：検索→リンク→著作権を明確に分離して整頓 */
-  .jbs-ft--compact{
-    padding:16px 0 14px !important;
+
+  .jbs-ft--compact {
+    padding: 16px 0 14px !important;
   }
 
-  .jbs-ft--compact .jbs-ft__row--desc{
-    display:block !important;
-    padding-bottom:14px !important;
+  .jbs-ft--compact .jbs-ft__row--desc {
+    display: block !important;
+    padding-bottom: 14px !important;
   }
 
-  .jbs-ft--compact .jbs-ft__row--desc .jbs-ft__desc{
-    margin:0 !important;
-    font-size:12px !important;
-    line-height:1.7 !important;
+  .jbs-ft--compact .jbs-ft__row--desc .jbs-ft__desc {
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
   }
 
-  .jbs-ft--compact .jbs-ft__row--utility{
-    display:grid !important;
-    grid-template-columns:1fr 1fr !important;
-    gap:10px 14px !important;
-    align-items:center !important;
-    padding-top:14px !important;
-    border-top:1px solid rgba(255,255,255,.22) !important;
-    white-space:normal !important;
+  .jbs-ft--compact .jbs-ft__row--utility {
+    display: grid !important;
+    gap: 10px 14px !important;
+    align-items: center !important;
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(255,255,255,.22) !important;
+    white-space: normal !important;
   }
 
-  .jbs-ft--compact .jbs-ft__search{
-    grid-column:1 / -1 !important;
-    width:100% !important;
-    margin:0 !important;
+  .jbs-ft--compact .jbs-ft__search {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    margin: 0 !important;
   }
 
-  .jbs-ft--compact .jbs-ft__search form{
-    width:100% !important;
+  .jbs-ft--compact .jbs-ft__search form {
+    width: 100% !important;
   }
 
-  .jbs-ft--compact .jbs-ft__row--utility > a{
-    display:block !important;
-    margin:0 !important;
-    font-size:12px !important;
-    line-height:1.45 !important;
-    text-align:left !important;
+  .jbs-ft--compact .jbs-ft__row--utility > a {
+    display: block !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
   }
 
-  .jbs-ft--compact .jbs-ft__copy{
-    grid-column:1 / -1 !important;
-    width:100% !important;
-    margin:2px 0 0 !important;
-    padding-top:10px !important;
-    border-top:1px solid rgba(255,255,255,.14) !important;
-    font-size:10px !important;
-    line-height:1.5 !important;
-    text-align:left !important;
+  .jbs-ft--compact .jbs-ft__copy {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    margin: 2px 0 0 !important;
+    padding-top: 10px !important;
+    border-top: 1px solid rgba(255,255,255,.14) !important;
+    font-size: 10px !important;
+    line-height: 1.5 !important;
   }
 }
 
-
 /* ==========================================================================
-   SPお知らせレイアウトをv75相当に復元 / タイトル太字
+   SPお知らせレイアウトをタイトル太字
    ========================================================================== */
-@media (max-width:600px){
 
-  /* お知らせ欄のみ、v76で変更した2列レイアウトを取り消す */
+@media (max-width:600px) {
+  /* お知らせ欄は4列グリッドを使用 */
+
   .jbs-newslist--notice > li,
-  .jbs-newslist--notice > li > a{
-    height:auto !important;
-    min-height:34px !important;
+  .jbs-newslist--notice > li > a {
+    height: auto !important;
+    min-height: 34px !important;
   }
 
-  .jbs-newslist--notice > li > a{
-    display:grid !important;
-    grid-template-columns:auto 5.5em minmax(0,1fr) auto !important;
-    column-gap:0 !important;
-    row-gap:0 !important;
-    padding:6px 2px !important;
-    align-items:start !important;
+  .jbs-newslist--notice > li > a {
+    display: grid !important;
+    grid-template-columns: auto 5.5em minmax(0,1fr) auto !important;
+    column-gap: 0 !important;
+    row-gap: 0 !important;
+    padding: 6px 2px !important;
   }
 
-  .jbs-newslist--notice .jbs-newslabel{
-    width:5.5em !important;
-    max-width:none !important;
-    justify-self:center !important;
-    margin-left:5px !important;
-    margin-right:5px !important;
-    padding-left:4px !important;
-    padding-right:4px !important;
+  .jbs-newslist--notice .jbs-newslabel {
+    width: 5.5em !important;
+    max-width: none !important;
+    justify-self: center !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
   }
 
   .jbs-newslist--notice time,
   .jbs-newslist--notice .jbs-newslabel,
-  .jbs-newslist--notice .jbs-fresh{
-    align-self:start !important;
-    margin-top:1px !important;
+  .jbs-newslist--notice .jbs-fresh {
+    align-self: start !important;
+    margin-top: 1px !important;
   }
 
-  .jbs-newslist--notice .jbs-newsline__title{
-    width:100% !important;
-    min-width:0 !important;
-    margin-left:0 !important;
-    padding-left:0 !important;
-    overflow:visible !important;
-    white-space:normal !important;
-    text-overflow:clip !important;
-    line-height:1.45 !important;
-    font-weight:700 !important;
+  .jbs-newslist--notice .jbs-newsline__title {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    text-overflow: clip !important;
+    line-height: 1.45 !important;
+    font-weight: 700 !important;
   }
 }
-
 
 /* ==========================================================================
    イベント曜日表示 / PC列幅微調整
    ========================================================================== */
 
 /* PC：右列をほんの少し広く */
-@media (min-width:901px){
-  .jbs-newscols--dual{
-    grid-template-columns:minmax(0,6.8fr) minmax(0,3.2fr) !important;
-  }
-}
 
 /* イベント日時：日付 曜日 時刻 */
-.jbs-newslist--schedule time{
-  display:inline-flex !important;
-  align-items:center !important;
-  gap:4px !important;
+
+.jbs-newslist--schedule time {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
 }
 
-.jbs-event-dow{
-  font-weight:700 !important;
+.jbs-event-dow {
+  font-weight: 700 !important;
 }
 
-.jbs-event-dow.is-weekday{
-  color:#16803C !important;
+.jbs-event-dow.is-weekday {
+  color: #16803C !important;
 }
 
-.jbs-event-dow.is-sat{
-  color:#2F6FB0 !important;
+.jbs-event-dow.is-sat {
+  color: #2F6FB0 !important;
 }
 
-.jbs-event-dow.is-sunholiday{
-  color:#C8105A !important;
+.jbs-event-dow.is-sunholiday {
+  color: #C8105A !important;
 }
-
 
 /* ==========================================================================
    お知らせ/イベント列幅 2:1 / SPイベント日時重なり修正
    ========================================================================== */
 
 /* PC：お知らせ 2 / イベント予定 1 */
-@media (min-width:901px){
-  .jbs-newscols--dual{
-    grid-template-columns:minmax(0,2fr) minmax(0,1fr) !important;
+
+@media (min-width:901px) {
+  .jbs-newscols--dual {
+    grid-template-columns: minmax(0,2fr) minmax(0,1fr) !important;
   }
 }
 
 /* SP：日時列は内容幅を確保し、イベント名と重ならないようにする */
-@media (max-width:600px){
-  .jbs-newslist--schedule > li > a{
-    grid-template-columns:max-content minmax(0,1fr) auto !important;
-    column-gap:8px !important;
-    align-items:center !important;
+
+@media (max-width:600px) {
+  .jbs-newslist--schedule > li > a {
+    grid-template-columns: max-content minmax(0,1fr) auto !important;
+    column-gap: 8px !important;
+    align-items: center !important;
   }
 
-  .jbs-newslist--schedule time{
-    min-width:max-content !important;
-    white-space:nowrap !important;
+  .jbs-newslist--schedule time {
+    min-width: max-content !important;
+    white-space: nowrap !important;
   }
 
-  .jbs-newslist--schedule .jbs-newsline__title{
-    min-width:0 !important;
-    overflow:hidden !important;
-    white-space:nowrap !important;
-    text-overflow:ellipsis !important;
+  .jbs-newslist--schedule .jbs-newsline__title {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
   }
 }
-
 
 /* ==========================================================================
    SPお知らせ縦位置調整 / PCフッター区切り線
    ========================================================================== */
 
 /* SPお知らせ：日付・ラベル・タイトルを上下中央揃え */
-@media (max-width:600px){
-  .jbs-newslist--notice > li > a{
-    align-items:center !important;
+
+@media (max-width:600px) {
+  .jbs-newslist--notice > li > a {
+    align-items: center !important;
   }
 
   .jbs-newslist--notice time,
   .jbs-newslist--notice .jbs-newslabel,
   .jbs-newslist--notice .jbs-fresh,
-  .jbs-newslist--notice .jbs-newsline__title{
-    align-self:center !important;
-    margin-top:0 !important;
+  .jbs-newslist--notice .jbs-newsline__title {
+    align-self: center !important;
+    margin-top: 0 !important;
   }
 
-  .jbs-newslist--notice .jbs-newslabel{
-    line-height:1.35 !important;
+  .jbs-newslist--notice .jbs-newslabel {
+    line-height: 1.35 !important;
   }
 }
 
 /* PCフッター：スマホ版と同様、説明文とユーティリティ行の間に区切り線 */
-@media (min-width:901px){
-  .jbs-ft--compact .jbs-ft__row--utility{
-    margin-top:12px !important;
-    padding-top:12px !important;
-    border-top:1px solid rgba(255,255,255,.22) !important;
+
+@media (min-width:901px) {
+  .jbs-ft--compact .jbs-ft__row--utility {
+    padding-top: 12px !important;
   }
 }
-
 
 /* ==========================================================================
    フッター整列 / 今日のポジション選択肢太字
    ========================================================================== */
 
 /* 今日のポジション：PC/SP共通で選択肢を太字 */
-.jbs-position__choices button{
-  font-weight:700 !important;
+
+.jbs-position__choices button {
+  font-weight: 700 !important;
 }
 
 /* PC：2行目の4要素を均等配置 */
-@media (min-width:901px){
-  .jbs-ft--compact .jbs-ft__row--utility{
-    display:grid !important;
-    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-    gap:20px !important;
-    align-items:center !important;
-  }
-
-  .jbs-ft--compact .jbs-ft__search{
-    width:100% !important;
-    min-width:0 !important;
-    margin:0 !important;
-  }
-
-  .jbs-ft--compact .jbs-ft__search form{
-    width:100% !important;
-  }
-
-  .jbs-ft--compact .jbs-ft__row--utility > a{
-    margin:0 !important;
-    text-align:center !important;
-    white-space:normal !important;
-  }
-
-  .jbs-ft--compact .jbs-ft__copy{
-    width:auto !important;
-    margin:0 !important;
-    text-align:right !important;
-    white-space:normal !important;
-  }
-}
 
 /* SP：2リンクは左右均等、コピーライトは中央 */
-@media (max-width:600px){
-  .jbs-ft--compact .jbs-ft__row--utility{
-    grid-template-columns:1fr 1fr !important;
+
+@media (max-width:600px) {
+  .jbs-ft--compact .jbs-ft__row--utility {
+    grid-template-columns: 1fr 1fr !important;
   }
 
-  .jbs-ft--compact .jbs-ft__row--utility > a{
-    width:100% !important;
-    text-align:center !important;
+  .jbs-ft--compact .jbs-ft__row--utility > a {
+    width: 100% !important;
+    text-align: center !important;
   }
 
-  .jbs-ft--compact .jbs-ft__copy{
-    text-align:center !important;
+  .jbs-ft--compact .jbs-ft__copy {
+    text-align: center !important;
   }
 }
-
 
 /* ==========================================================================
    PCフッター2行目を等間隔配置 / 1・2行目の高さ統一
    ========================================================================== */
-@media (min-width:901px){
 
+@media (min-width:901px) {
   /* 1行目・2行目のエリア高を統一 */
+
   .jbs-ft--compact .jbs-ft__row--desc,
-  .jbs-ft--compact .jbs-ft__row--utility{
-    height:56px !important;
-    min-height:56px !important;
-    box-sizing:border-box !important;
+  .jbs-ft--compact .jbs-ft__row--utility {
+    box-sizing: border-box !important;
   }
 
-  .jbs-ft--compact .jbs-ft__row--desc{
-    padding:0 !important;
+  .jbs-ft--compact .jbs-ft__row--desc {
+    padding: 0 !important;
   }
 
   /* 4要素を4等分ではなく、要素間の空きを均等にする */
-  .jbs-ft--compact .jbs-ft__row--utility{
-    display:flex !important;
-    grid-template-columns:none !important;
-    justify-content:space-between !important;
-    align-items:center !important;
-    gap:0 !important;
-    margin-top:0 !important;
-    padding:0 !important;
-    border-top:1px solid rgba(255,255,255,.22) !important;
+
+  .jbs-ft--compact .jbs-ft__row--utility {
+    display: flex !important;
+    grid-template-columns: none !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0 !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(255,255,255,.22) !important;
   }
 
-  .jbs-ft--compact .jbs-ft__search{
-    flex:0 0 260px !important;
-    width:260px !important;
-    min-width:260px !important;
-    margin:0 !important;
+  .jbs-ft--compact .jbs-ft__search {
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    min-width: 260px !important;
+    margin: 0 !important;
   }
 
-  .jbs-ft--compact .jbs-ft__search form{
-    width:100% !important;
+  .jbs-ft--compact .jbs-ft__search form {
+    width: 100% !important;
   }
 
-  .jbs-ft--compact .jbs-ft__row--utility > a{
-    flex:0 0 auto !important;
-    width:auto !important;
-    margin:0 !important;
-    text-align:left !important;
-    white-space:nowrap !important;
+  .jbs-ft--compact .jbs-ft__row--utility > a {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
   }
 
-  .jbs-ft--compact .jbs-ft__copy{
-    flex:0 0 auto !important;
-    width:auto !important;
-    margin:0 !important;
-    text-align:left !important;
-    white-space:nowrap !important;
+  .jbs-ft--compact .jbs-ft__copy {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
   }
 }
-
 
 /* ==========================================================================
    PCフッター高さをコンパクト化
    ========================================================================== */
-@media (min-width:901px){
+
+@media (min-width:901px) {
   .jbs-ft--compact .jbs-ft__row--desc,
-  .jbs-ft--compact .jbs-ft__row--utility{
-    height:44px !important;
-    min-height:44px !important;
+  .jbs-ft--compact .jbs-ft__row--utility {
+    height: 44px !important;
+    min-height: 44px !important;
   }
 }
-
 
 /* ==========================================================================
    PCメニューバー高さ / ヘッダー英字サイズ・縦位置
    ========================================================================== */
-@media (min-width:901px){
 
-  .jbs-gnav .jbs-gnav__list > li > a{
-    min-height:48px !important;
-    height:48px !important;
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    box-sizing:border-box !important;
+@media (min-width:901px) {
+  .jbs-hd__name {
+    align-self: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
-  .jbs-hd__name{
-    align-self:center !important;
-    transform:none !important;
-    margin-top:0 !important;
-    margin-bottom:0 !important;
-  }
-
-  .jbs-hd__name span.jbs-hd__name-en{
-    font-size:12px !important;
+  .jbs-hd__name span.jbs-hd__name-en {
+    font-size: 12px !important;
   }
 }
-
 
 /* ==========================================================================
    一覧リンクのPCホバー演出をピンク文字へ統一 / 横罫線固定
    ========================================================================== */
-@media (hover:hover) and (pointer:fine){
 
+@media (hover:hover) and (pointer:fine) {
   /* お知らせ・イベント予定：横罫線は動かさず、タイトルだけブランド色へ */
+
   .jbs-newslist--singleline > li,
-  .jbs-newslist--singleline > li:hover{
-    border-bottom:1px solid var(--jbs-line) !important;
+  .jbs-newslist--singleline > li:hover {
+    border-bottom: 1px solid var(--jbs-line) !important;
   }
 
   .jbs-newslist--singleline > li > a,
-  .jbs-newslist--singleline > li > a:hover{
-    text-decoration:none !important;
+  .jbs-newslist--singleline > li > a:hover {
+    text-decoration: none !important;
   }
 
-  .jbs-newslist--singleline > li > a:hover .jbs-newsline__title{
-    color:var(--jbs-brand) !important;
+  .jbs-newslist--singleline > li > a:hover .jbs-newsline__title {
+    color: var(--jbs-brand) !important;
   }
 
   /* 日付・曜日・カテゴリラベルは情報色を維持 */
-  .jbs-newslist--singleline > li > a:hover time{
-    text-decoration:none !important;
+
+  .jbs-newslist--singleline > li > a:hover time {
+    text-decoration: none !important;
   }
 }
 
-
 /* ==========================================================================
-   PCメニューバー48px固定 / ヘッダータイトルを少し下へ
+   PCグローバルナビ / ヘッダー位置
    ========================================================================== */
-@media (min-width:901px){
 
+@media (min-width:901px) {
   /* メニューバー全体を48pxで固定 */
+
   .jbs-gnav,
   .jbs-gnav > .jbs-shell,
   .jbs-gnav__list,
-  .jbs-gnav__list > li{
-    min-height:48px !important;
-    height:48px !important;
+  .jbs-gnav__list > li {
+    min-height: 48px !important;
+    height: 48px !important;
   }
 
-  .jbs-gnav .jbs-gnav__list > li > a{
-    min-height:48px !important;
-    height:48px !important;
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    box-sizing:border-box !important;
+  .jbs-gnav .jbs-gnav__list > li > a {
+    min-height: 48px !important;
+    height: 48px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
   }
 
-  /* 日本語＋英語タイトル全体をわずかに下へ */
-  .jbs-hd__name{
-    transform:translateY(2px) !important;
-  }
+  /* 日本語＋英語タイトル全体の位置調整 */
 }
 
-
 /* ==========================================================================
-   PCヘッダータイトルをさらに2px下へ
+   PCヘッダータイトル位置
    ========================================================================== */
-@media (min-width:901px){
-  .jbs-hd__name{
-    transform:translateY(4px) !important;
+
+@media (min-width:901px) {
+  .jbs-hd__name {
+    transform: translateY(4px) !important;
   }
 }
