@@ -3886,3 +3886,89 @@ body.jbs-home {
   width: auto !important;
   height: 28px !important;
 }
+
+
+/* ==========================================================================
+   Tablet：JBS競技情報の中央罫線位置を上下で統一
+   / 今日のポジションを横並び化
+   ========================================================================== */
+
+@media (min-width:601px) and (max-width:1100px) {
+  /* 上段2列と下段2列を同一の基準幅にする */
+  .jbs-competition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  /* title-groups 自体に入っていた左余白を除去し、
+     内部2列の中央線を上段の中央線と同じX座標に合わせる */
+  .jbs-title-groups {
+    grid-column: 1 / -1 !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    padding-left: 0 !important;
+    border-left: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .jbs-title-groups .jbs-champion-group {
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .jbs-title-groups .jbs-champion-group + .jbs-champion-group {
+    padding-left: 16px !important;
+    border-left: 1px solid var(--jbs-line) !important;
+  }
+
+  /* 今日のポジション：
+     左＝盤面（最大520px）、右＝選択肢 */
+  .jbs-position-card {
+    display: grid !important;
+    grid-template-columns: minmax(0, 520px) minmax(220px, 1fr) !important;
+    grid-template-areas:
+      "position-head position-head"
+      "position-board position-choices" !important;
+    column-gap: 16px !important;
+    align-items: stretch !important;
+  }
+
+  .jbs-position-card .jbs-sec__hd {
+    grid-area: position-head !important;
+  }
+
+  .jbs-position-card .jbs-position {
+    grid-area: position-board !important;
+    align-self: start !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid var(--jbs-line) !important;
+    box-sizing: border-box !important;
+  }
+
+  .jbs-position-card .jbs-position img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  .jbs-position-card .jbs-position__choices {
+    grid-area: position-choices !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 44px !important;
+    gap: 8px !important;
+    align-content: center !important;
+    align-self: stretch !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    border: 1px solid var(--jbs-line) !important;
+    box-sizing: border-box !important;
+  }
+
+  .jbs-position-card .jbs-position__choices button {
+    min-height: 44px !important;
+    height: 44px !important;
+    padding: 6px 10px !important;
+  }
+}
