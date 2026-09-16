@@ -3857,3 +3857,32 @@ body.jbs-home {
     height: 32px !important;
   }
 }
+
+
+/* ==========================================================================
+   SNSロゴ：最終サイズ調整
+   YouTube 24px / X・Instagram・Facebook 28px
+   ========================================================================== */
+
+.jbs-hd__sns a,
+.jbs-drawer__sns a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.jbs-hd__sns a[aria-label="YouTube"] img,
+.jbs-drawer__sns a[aria-label="YouTube"] img {
+  width: auto !important;
+  height: 24px !important;
+}
+
+.jbs-hd__sns a[aria-label="X"] img,
+.jbs-hd__sns a[aria-label="Instagram"] img,
+.jbs-hd__sns a[aria-label="Facebook"] img,
+.jbs-drawer__sns a[aria-label="X"] img,
+.jbs-drawer__sns a[aria-label="Instagram"] img,
+.jbs-drawer__sns a[aria-label="Facebook"] img {
+  width: auto !important;
+  height: 28px !important;
+}
