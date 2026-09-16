@@ -3794,3 +3794,66 @@ body.jbs-home {
     object-fit: contain !important;
   }
 }
+
+
+/* ==========================================================================
+   SNSロゴ：光学的サイズ調整
+   各ロゴの外形ではなく、並べたときの見た目の面積・重さを揃える
+   ========================================================================== */
+
+@media (min-width:901px) {
+  .jbs-hd__sns a {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    padding: 0 !important;
+  }
+
+  .jbs-hd__sns a[aria-label="YouTube"] img {
+    width: 32px !important;
+    height: 24px !important;
+  }
+
+  .jbs-hd__sns a[aria-label="X"] img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .jbs-hd__sns a[aria-label="Instagram"] img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .jbs-hd__sns a[aria-label="Facebook"] img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+@media (max-width:900px) {
+  .jbs-drawer__sns a {
+    width: 46px !important;
+    min-width: 46px !important;
+    height: 46px !important;
+  }
+
+  .jbs-drawer__sns a[aria-label="YouTube"] img {
+    width: 36px !important;
+    height: 26px !important;
+  }
+
+  .jbs-drawer__sns a[aria-label="X"] img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .jbs-drawer__sns a[aria-label="Instagram"] img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .jbs-drawer__sns a[aria-label="Facebook"] img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
