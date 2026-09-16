@@ -3568,3 +3568,46 @@ body.jbs-home {
     border-bottom: 1px solid var(--jbs-line) !important;
   }
 }
+
+
+/* ==========================================================================
+   競技情報：小見出しデザイン再調整
+   背景塗りを廃止し、短い横アクセントで階層を表現
+   ========================================================================== */
+
+.jbs-dashboard-subhd,
+.jbs-dashboard-subtitle {
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border-bottom: 1px solid var(--jbs-line) !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* 親見出しと重複する縦アクセントは使わない */
+.jbs-dashboard-subhd::before,
+.jbs-dashboard-subtitle::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* 小見出し専用：短い横アクセント */
+.jbs-dashboard-subhd::after,
+.jbs-dashboard-subtitle::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 4px !important;
+  bottom: -1px !important;
+  width: 28px !important;
+  height: 2px !important;
+  background: var(--jbs-brand) !important;
+}
+
+.jbs-dashboard-subhd h3,
+.jbs-dashboard-subtitle {
+  color: var(--jbs-ink) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
