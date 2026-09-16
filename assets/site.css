@@ -4128,3 +4128,25 @@ body.jbs-home {
 .jbs-flow__go:focus-visible::before {
   color: var(--jbs-brand) !important;
 }
+
+
+/* ==========================================================================
+   v115
+   PC / Tablet / SP 共通：「≫」リンク全体をJBSピンクに統一
+   ========================================================================== */
+
+.jbs-more,
+.jbs-flow__go,
+.jbs-more:visited,
+.jbs-flow__go:visited,
+.jbs-more:hover,
+.jbs-flow__go:hover,
+.jbs-more:focus-visible,
+.jbs-flow__go:focus-visible {
+  color: var(--jbs-brand) !important;
+}
+
+.jbs-more::before,
+.jbs-flow__go::before {
+  color: var(--jbs-brand) !important;
+}
