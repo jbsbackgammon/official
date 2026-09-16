@@ -3629,3 +3629,91 @@ body.jbs-home {
   display: block !important;
   border-radius: 2px !important;
 }
+
+
+/* ==========================================================================
+   ビッグメニュー：ページ構成改修案（2026-09）
+   ========================================================================== */
+
+@media (min-width:901px) {
+  .jbs-mega__inner--3equal {
+    grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+  }
+
+  .jbs-mega__inner--4 {
+    grid-template-columns: repeat(4,minmax(0,1fr)) !important;
+    gap: 18px !important;
+  }
+
+  .jbs-mega--dense .jbs-mega__inner {
+    padding-top: 16px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .jbs-mega--dense .jbs-mega__group {
+    padding-right: 14px !important;
+  }
+
+  .jbs-mega--dense .jbs-mega__group h3 {
+    margin-bottom: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .jbs-gnav .jbs-mega--dense .jbs-mega__group a,
+  .jbs-mega--dense .jbs-mega__pending {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  .jbs-mega__pending {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 19px;
+    padding: 4px 10px 4px 14px;
+    color: var(--jbs-ink-3);
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .jbs-mega__pending::before {
+    content: "›";
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    color: var(--jbs-line-strong);
+    font-weight: 800;
+  }
+
+  .jbs-mega--dense .jbs-mega__pending::before {
+    top: 2px;
+  }
+
+  .jbs-mega__pending small {
+    flex: 0 0 auto;
+    color: var(--jbs-ink-3);
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width:900px) {
+  .jbs-gnav__mobile-pending > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 20px 10px 34px;
+    color: var(--jbs-ink-3);
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .jbs-gnav__mobile-pending small {
+    flex: 0 0 auto;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
