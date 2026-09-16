@@ -3717,3 +3717,30 @@ body.jbs-home {
     font-weight: 400;
   }
 }
+
+
+/* ==========================================================================
+   ビッグメニュー：項目長に応じた自動幅調整
+   「バックギャモンで遊ぶ」は中央のJBS公認例会に必要幅を優先配分
+   ========================================================================== */
+
+@media (min-width:901px) {
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__inner {
+    grid-template-columns:
+      minmax(max-content, .8fr)
+      minmax(0, 2.4fr)
+      minmax(max-content, .8fr) !important;
+    gap: 20px !important;
+  }
+
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group h3,
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group a {
+    white-space: nowrap !important;
+  }
+
+  .jbs-mega[aria-label="バックギャモンで遊ぶ メニュー"] .jbs-mega__group--2col {
+    grid-template-columns: repeat(2, max-content) !important;
+    justify-content: space-between !important;
+    column-gap: 20px !important;
+  }
+}
