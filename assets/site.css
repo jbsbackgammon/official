@@ -3611,3 +3611,21 @@ body.jbs-home {
   font-size: 14px !important;
   font-weight: 700 !important;
 }
+
+
+/* ==========================================================================
+   PICK UP：スライド移動中も角丸を維持
+   「バックギャモンをやってみよう！」カードと同じ 3px に統一
+   ========================================================================== */
+
+.jbs-vb__item {
+  border-radius: 3px !important;
+  overflow: hidden !important;
+  clip-path: inset(0 round 3px);
+  isolation: isolate;
+}
+
+.jbs-vb__item img {
+  display: block !important;
+  border-radius: 2px !important;
+}
