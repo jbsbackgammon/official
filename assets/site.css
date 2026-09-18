@@ -4024,3 +4024,51 @@ body.jbs-home {
     row-gap: 22px !important;
   }
 }
+
+
+/* ==========================================================================
+   v120
+   - 一覧の1行目を2行目以降と同じ高さに統一
+   - 各セクションタイトル上にごく小さな余白を追加
+   ========================================================================== */
+
+/* セクションタイトル上に6pxだけ呼吸感を追加 */
+.jbs-vb__hd,
+.jbs-newscols .jbs-sec__hd,
+.jbs-start-full .jbs-sec__hd,
+.jbs-dashboard-grid .jbs-sec__hd {
+  margin-top: 6px !important;
+}
+
+/* 一覧系はタイトル直下の余白をなくし、
+   1行目だけ高く見える状態を解消 */
+.jbs-newscols .jbs-sec__hd,
+.jbs-dashboard-grid .jbs-sec__hd {
+  margin-bottom: 0 !important;
+}
+
+/* お知らせ・イベント：全行を完全に同じ高さへ */
+.jbs-newslist--singleline > li,
+.jbs-newslist--singleline > li > a {
+  height: 36px !important;
+  min-height: 36px !important;
+  box-sizing: border-box !important;
+}
+
+/* レーティング・タイトル：全行を完全に同じ高さへ */
+.jbs-dash-list > li,
+.jbs-dash-list--champions > li.jbs-dash__subwinner {
+  height: 34px !important;
+  min-height: 34px !important;
+  box-sizing: border-box !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width:600px) {
+  .jbs-newslist--singleline > li,
+  .jbs-newslist--singleline > li > a {
+    height: 34px !important;
+    min-height: 34px !important;
+  }
+}
